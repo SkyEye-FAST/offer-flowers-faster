@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "offer-flowers-faster",
+	"version": "${version}",
+	"name": "Offer Flowers Faster",
+	"description": "Increases the probability of the Iron Golem offering flowers by 4000 times.",
+	"authors": [
+		"SkyEye_FAST"
+	],
+	"license": "Apache-2.0",
+	"icon": "assets/offer-flowers-faster/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.skyeyefast.offerflowersfaster.OfferFlowersFaster"
+		]
+	},
+	"mixins": [
+		"offer-flowers-faster.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": ">=1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
