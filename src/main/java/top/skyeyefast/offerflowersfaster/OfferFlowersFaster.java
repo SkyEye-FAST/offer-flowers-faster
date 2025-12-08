@@ -1,7 +1,6 @@
-package com.skyeyefast.offerflowersfaster;
+package top.skyeyefast.offerflowersfaster;
 
 import net.fabricmc.api.ModInitializer;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
