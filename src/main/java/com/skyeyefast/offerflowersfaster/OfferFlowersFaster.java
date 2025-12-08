@@ -2,24 +2,24 @@ package com.skyeyefast.offerflowersfaster;
 
 import net.fabricmc.api.ModInitializer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class OfferFlowersFaster implements ModInitializer {
-	public static final String MOD_ID = "offer-flowers-faster";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final String MOD_ID = "offer-flowers-faster";
 
-	private static final double DEFAULT_MULTIPLIER = 4000.0D;
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+    public static final double DEFAULT_MULTIPLIER = 4000.0D;
 
-	private static double flowerOfferMultiplier = DEFAULT_MULTIPLIER;
+    private static double flowerOfferMultiplier = DEFAULT_MULTIPLIER;
 
-	public static double getFlowerOfferMultiplier() {
-		return flowerOfferMultiplier;
-	}
+    public static double getFlowerOfferMultiplier() {
+        return flowerOfferMultiplier;
+    }
 
-	@Override
-	public void onInitialize() {
-		flowerOfferMultiplier = Math.max(1.0D, DEFAULT_MULTIPLIER);
-		LOGGER.info("Offer Flowers Faster multiplier set to {}", flowerOfferMultiplier);
-	}
+    @Override
+    public void onInitialize() {
+        flowerOfferMultiplier = Math.max(1.0D, DEFAULT_MULTIPLIER);
+        LOGGER.info("Offer Flowers Faster multiplier set to {}", flowerOfferMultiplier);
+    }
 }
