@@ -1,14 +1,14 @@
 package top.skyeyefast.offerflowersfaster.mixin;
 
-import top.skyeyefast.offerflowersfaster.OfferFlowersFaster;
 import net.minecraft.world.entity.ai.goal.OfferFlowerGoal;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.Constant;
-import org.spongepowered.asm.mixin.injection.ModifyConstant;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
+import top.skyeyefast.offerflowersfaster.OfferFlowersFaster;
 
 @Mixin(OfferFlowerGoal.class)
 public abstract class OfferFlowerGoalMixin {
-    @ModifyConstant(method = "canUse", constant = @Constant(intValue = 8000))
+    @ModifyArg(method = "canUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/RandomSource;nextInt(I)I"), index = 0)
     private int offerflowersfaster$adjustOfferInterval(int original) {
         double multiplier = OfferFlowersFaster.getFlowerOfferMultiplier();
         return (int) Math.max(1.0D, Math.round(original / multiplier));
