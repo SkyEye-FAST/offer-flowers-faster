@@ -1,4 +1,4 @@
-package com.skyeyefast.offerflowersfaster;
+package top.skyeyefast.offerflowersfaster;
 
 import net.fabricmc.api.ModInitializer;
 
