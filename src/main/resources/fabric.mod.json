@@ -23,8 +23,5 @@
     "minecraft": ">=1.14 <1.19",
     "java": ">=8",
     "fabric": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
