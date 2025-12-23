@@ -3,8 +3,6 @@ package top.skyeyefast.offerflowersfaster;
 import net.fabricmc.api.ModInitializer;
 
 public class OfferFlowersFaster implements ModInitializer {
-    public static final String MOD_ID = "offer-flowers-faster";
-
     public static final double DEFAULT_MULTIPLIER = 4000.0D;
 
     private static double flowerOfferMultiplier = DEFAULT_MULTIPLIER;
